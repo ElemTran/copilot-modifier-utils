@@ -1,0 +1,31 @@
+{
+  "name": "copilot-modifier-utils",
+  "version": "1.0.0",
+  "description": "Node.js utilities for modifying Copilot extension JS",
+  "private": true,
+  "bin": {
+    "copilot-modifier": "src/run_modifier.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "pkg . --out-path dist/"
+  },
+  "pkg": {
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "targets": [
+      "node18-win-x64",
+      "node18-macos-x64",
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "jest": "^29.7.0",
+    "pkg": "^5.8.1"
+  }
+}
